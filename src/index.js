@@ -5,7 +5,7 @@ const app = express();
 
 (async () => {
     try {
-        await mongoose.connect(`${process.env.MONGODB_URI} / ${DB_NAME}`);
+        await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
         app.on("error", (error) => {
             console.error("Error: ", error);
             throw error;
